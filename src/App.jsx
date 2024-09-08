@@ -16,7 +16,7 @@ import FeaturedAuthor from './components/FeaturedAuthoer';
 import AProductDetail from './components/FeaturedAuthorDetail';
 import DailyDeals from './components/DailyDeals';
 import DProductDetail from './components/DailyDealsDetail';
-
+import Login from './components/login'
 import SingingUp from './components/SingingUp';
 import AddtoCart from './components/AddtoCart';
 import BlogDetail from './Pages/BlogDetail';
@@ -47,6 +47,7 @@ function App() {
         <Route path="/SingingUp" element={<SingingUp />} />
         <Route path="/AddtoCart" element={<AddtoCart />} />
         <Route path="/product/:id" component={ProductDetails} />
+        <Route path='/login' element={<Login/>} /> 
         
        
        

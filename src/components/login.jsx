@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
-const SigningUp = () => {
+const login = () => {
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   const handleChange = (e) => {
@@ -22,21 +19,11 @@ const SigningUp = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
-        <h2 className="text-2xl font-bold text-center mb-6">Sign Up</h2>
+        <h2 className="text-2xl font-bold text-center mb-6">Login Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring focus:border-blue-500"
-              placeholder="Enter your name"
-              required
-            />
+            
+        
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -66,41 +53,23 @@ const SigningUp = () => {
               required
             />
           </div>
-          <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="confirmPassword">
-              Confirm Password
-            </label>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring focus:border-blue-500"
-              placeholder="Confirm your password"
-              required
-            />
-          </div>
+          
           <div className="flex items-center justify-between">
             <button
               type="submit"
-              className="w-full bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-500 focus:outline-none focus:bg-blue-600"
+              className="w-full bg-red-600 text-white font-bold py-2 px-4 rounded hover:bg-red-500 focus:outline-none focus:bg-red-500"
             >
-              Sign Up
+              Login Up
             </button>
           </div>
         </form>
-        <p className="text-center text-gray-600 text-sm mt-4">
-          Already have an account?{" "}
-          <Link to='/login'  className="text-blue-500 hover:text-blue-700">
-            Log in
-          </Link>
-        </p>
+       
       </div>
     </div>
   );
 };
 
-export default SigningUp;
+export default login;
 
 
 
