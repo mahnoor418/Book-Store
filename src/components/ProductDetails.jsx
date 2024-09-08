@@ -12,6 +12,7 @@ import {  useNavigate} from 'react-router-dom';
 import { useCart } from '../components/CartContext';
 
 
+
 const ProductDetail = () => {
     
   

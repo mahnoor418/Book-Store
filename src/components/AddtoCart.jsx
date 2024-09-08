@@ -18,6 +18,9 @@ const AddtoCart = () => {
   const handleContinueShopping = () => {
     navigate('/products'); 
   };
+  const handleCheckout = () => {
+    navigate('/checkout');
+  }
 
   return (
     <div className='parent div'>
@@ -69,13 +72,21 @@ const AddtoCart = () => {
         )}
 
         {/* Continue Shopping Button */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-8 ">
           <button 
             className="bg-red-600 mb-8 text-white px-6 py-3 rounded hover:bg-red-500"
             onClick={handleContinueShopping}
           >
             Continue Shopping
           </button>
+          <div>
+          <button 
+            className="bg-red-600 mb-8 text-white px-6 py-3 pl-[30px] rounded hover:bg-red-500"
+            onClick={handleCheckout}
+          >
+           Buy Now
+          </button>
+          </div>
         </div>
       </div>
     </div>
