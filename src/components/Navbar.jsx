@@ -5,10 +5,13 @@ import { IoIosGitCompare } from "react-icons/io";
 import { TbJewishStar } from "react-icons/tb";
 import { MdOutlineMenu } from "react-icons/md";
 import { asset } from "../assets/assets";
-import Wishlist from "./Wishlist";
+import  { useContext } from 'react';
+import { ThemeContext } from "../components/ThemeContext";
+// import Wishlist from "./Wishlist";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -52,6 +55,17 @@ const Navbar = () => {
             className="text-gray-600 hover:text-gray-800 md:hidden"
             onClick={toggleMenu}
           >
+            <MdOutlineMenu />
+          </button>
+        </div>
+        <div className="flex items-center gap-4">
+          <button
+            className="text-gray-600 hover:text-gray-800 dark:text-gray-300"
+            onClick={toggleDarkMode}
+          >
+            {darkMode ? '🌙' : '☀️'}
+          </button>
+          <button className="text-gray-600 hover:text-gray-800 dark:text-gray-300 md:hidden" onClick={toggleMenu}>
             <MdOutlineMenu />
           </button>
         </div>
